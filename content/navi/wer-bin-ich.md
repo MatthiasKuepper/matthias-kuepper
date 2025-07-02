@@ -1,0 +1,7 @@
+![0.1](https://cdn.glitch.global/8184a181-cd9c-42ec-828f-7bee6311f5b0/Bewerbung.01?v=1747229819937)  
+# Hallo, mein Name  Matthias Küpper, 17 Jahre alt, geboren in Birkesdorf und wohnhaft im idyllischen Stadtteil Vlatten in der Eifel. 
+### Aktuell besuche ich das Berufskolleg Kaufmännische Schulen des Kreises Düren, wo ich den Theoretischen Teil der Fachhochschulreife anstrebe und mich auf eine spannende berufliche Zukunft vorbereite. 
+### Neben der Schule arbeite ich samstags bei Netto in Heimbach, was mir erste Einblicke in die Arbeitswelt gibt und mir hilft, Eigenverantwortung zu übernehmen.
+### Mein ehrenamtliches Engagement liegt mir besonders am Herzen: Seit mehreren Jahren bin ich mit Begeisterung Messdiener und habe im Jahr 2024 zusätzlich das Amt des Lektors übernommen. Als Mitglied des „Jungen Teams“ unterstütze ich das Stadtjournal und setze mich aktiv für die Arbeit des Jugendwohl Vlatten e. V. ein. Außerdem bin ich Vorsitzender der Jungen Union Stadtverband Heimbach und engagiere mich für die besorgten jungen Menschen in unserer Region.
+### In meiner Freizeit liebe ich es, Zeit mit meiner Familie und Freunden zu verbringen. Ich bin gerne in meinem Heimatdorf aktiv und genieße die einzigartige Landschaft der Eifel. 
+![Matthias hat den Führerschein](https://cdn.glitch.global/8184a181-cd9c-42ec-828f-7bee6311f5b0/IMG-20250417-WA0014.jpg?v=1747900503466)

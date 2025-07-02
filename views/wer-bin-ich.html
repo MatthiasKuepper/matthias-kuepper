@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.1 Transitional//EN">
+<html>
+<head>
+<title>Matthias Küpper</title>
+<meta name="AUTHOR" content="Offizielle Website von Matthias Küpper">
+<meta name="COPYRIGHT" content="Copyright (c) 2024 by Matthias Küpper">
+<meta name="robots" content="index, follow">
+<meta name="DESCRIPTION" content="Dies ist eine Informationsseite von Matthias Küpper">
+<meta name="KEYWORDS" content="Küpper, Matthias, Vlatten, Heimbach, Matthias Küpper,CDU Heimbach, Junge Union heimbach,Wer ist das, Wer ist er, ">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=deviece-width, initial-scale=1" />
+  <meta name="google-site-verification" content="zqZy4NgBA4P5_WvQ803VVgxmSzv7N2UQrOEppV9G6Q0" />
+  <!-- Load the element definition for markdown-->
+<script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"></script>
+<!-- import the webpage's stylesheet -->
+<link rel="stylesheet" href="/style.css" />
+<!-- import the webpage's javascript file -->
+<script src="/script.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link 
+href="https://fonts.googleapis.com/css2?family=border-radius:10px 25%;rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+<!-- import the webpage's javascript file -->
+  <!-- import the webpage's javascript file -->
+<script src="/script.js" defer></script>  
+<!-- Einbindung der Javascript-Bibliothek JQUERY von GOOGLE -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <!-- Favicon über externen Link -->
+  <link rel="icon" href="https://cdn.glitch.global/8184a181-cd9c-42ec-828f-7bee6311f5b0/Design_ohne_Titel__9_-removebg-preview.png?v=1747828631589" type="image/png">
+  
+ <!--TEILEN***-->
+<!-- Titel der Seite -->
+<meta property="og:title" content="Matthias Küpper">
+
+<!-- Beschreibung -->
+<meta property="og:description" content="Wer bin ich">
+
+<!-- Bild-Vorschau -->
+<meta property="og:image" content="https://cdn.glitch.global/8184a181-cd9c-42ec-828f-7bee6311f5b0/Bewrbung?v=1736963072145">
+
+<!-- Ziel-URL -->
+<meta property="og:url" content="https://kuepper-matthias.glitch.me">
+</head>
+<body onload="setTimeout(function() {setActiveMenu('#main_menu_item_werbinich');}, 1000);">
+<div id="kopfbereich">    
+  	</div> <!-- Ende kopfbereich -->
+	<div id="navibereich">
+	</div> <!-- Ende navibereich -->
+	<div id="textbereich">
+    <div class="content-block"> 
+    <zero-md src="navi/wer-bin-ich.md">
+        <template>
+        <!-- Load external stylesheets with a `<link rel="stylesheet">` tag -->
+         <link rel="stylesheet" href="/markdown-style.css" />
+        </template>
+      </zero-md>
+     
+      </div><!-- Ende content-block --> 
+</div> <!-- Ende textbereich -->
+	<div id="fussbereich">
+         	</div> <!-- Ende fussbereich -->
+  	<div id="newsbereich">
+       	</div>  <!-- Ende newsbereich --> 
+   <script>
+    $( window ).on( "load", function() { 
+       load_content('navibereich', 'content-navi.html');
+       load_content('newsbereich', 'content-news.html');
+       load_content('fussbereich', 'content-footer.html');
+       load_content('kopfbereich', 'content-header.html');
+    });
+  </script>
+  </body>
+</html>

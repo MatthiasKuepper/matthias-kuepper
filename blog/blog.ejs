@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.1 Transitional//EN">
+<html>
+<head>
+  <title>Matthias Küpper | Beiträge</title>
+  <meta name="AUTHOR" content="Matthias Küpper">
+  <meta name="COPYRIGHT" content="Copyright (c) 2024 by Matthias Küpper">
+  <meta name="robots" content="index, follow">
+  <meta name="DESCRIPTION" content="Hier finden Sie meine Aktivitäten">
+  <meta name="KEYWORDS" content="Küpper, Matthias, Vlatten, Heimbach, Matthias Küpper ">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"></script>
+  <link rel="stylesheet" href="/style.css" />
+  <script src="/script.js" defer></script>
+  <!-- Favicon über externen Link -->
+  <link rel="icon" href="https://cdn.glitch.global/8184a181-cd9c-42ec-828f-7bee6311f5b0/Design_ohne_Titel__9_-removebg-preview.png?v=1747828631589" type="image/png">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300..900&display=swap" rel="stylesheet">
+  <script src="/script.js" defer></script>  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <link rel="stylesheet" href="/markdown-style.css" />
+</head>
+
+<body onload="setTimeout(function() {setActiveMenu('#main_menu_item_blog');}, 1000);">
+
+  <div id="kopfbereich"></div>
+  <div id="navibereich"></div>
+
+  <div id="textbereich">
+    <div class="content-block">
+      <p>Beiträge
+       <span id="post-count" style="color:cadetblue; font-weight:normal;"></span>
+      </p>
+      <hr>
+
+      <div class="blog-grid">
+        <% const strArr1 = dateiDaten; %>
+        <% const dscArr = strArr1.sort((a, b) => b.date.localeCompare(a.date)); %>
+
+        <% dscArr.forEach(datei => { %>
+          <% var st = datei.date %>
+          <% var dt = new Date(st); %>
+          <% var date_blog = ("0" + dt.getDate()).slice(-2) + "." + ("0" + (dt.getMonth() + 1)).slice(-2) + "." + dt.getFullYear() %>
+          <% var datei_link = datei.path.slice(0, -3); %>
+
+          <a href="<%= datei_link %>" style="text-decoration: none; color: inherit;">
+            <div class="post blog-item" data-category="<%= datei.category %>">
+              
+              <!-- Kategorie -->
+              <p><%= datei.category %></p>
+
+              <% if (datei.img) { %>
+                <img src="<%= datei.img %>#img-blog" alt="Blog">
+              <% } %>
+
+              <p class="date"><%= date_blog %></p>
+              <p class="title"><%= datei.title %></p>
+              <p class="description"><%= datei.description %><br><br> mehr lesen...</p>
+              
+                  
+                
+            </div>
+          </a>
+        <% }); %>
+      </div> <!-- Ende blog-grid -->
+    </div> <!-- Ende content-block -->
+  </div> <!-- Ende textbereich -->
+
+  <div id="fussbereich"></div>
+  <div id="newsbereich"></div>
+
+  <script>
+    $(window).on("load", function () { 
+      load_content('navibereich', 'content-navi.html');
+      load_content('newsbereich', 'content-news.html');
+      load_content('fussbereich', 'content-footer.html');
+      load_content('kopfbereich', 'content-header.html');
+    });
+     </script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const posts = document.querySelectorAll(".post"); // Passe ggf. die Klasse an
+    const count = posts.length;
+    const countSpan = document.getElementById("post-count");
+    if (countSpan) {
+      countSpan.textContent = `(${count})`;
+    }
+  });
+</script>
+</body>
+</html>

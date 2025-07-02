@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.1 Transitional//EN"> 
+<html> 
+<head> 
+  <title>Matthias Küpper | Bildergalerie</title> 
+  <meta name="AUTHOR" content="Matthias Küpper"> 
+  <meta name="COPYRIGHT" content="Copyright (c) 2024 by Matthias Küpper"> 
+  <meta name="robots" content="index, follow"> 
+  <meta name="DESCRIPTION" content="Hier finden Sie Bilder meiner Ehrenämter oder der Politik"> 
+  <meta name="KEYWORDS" content="Küpper, Matthias, Vlatten, Heimbach, Matthias Küpper"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/> 
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+  <meta name="google-site-verification" content="zqZy4NgBA4P5_WvQ803VVgxmSzv7N2UQrOEppV9G6Q0" />
+
+  <!-- Stylesheet und Skripte -->
+  <link rel="stylesheet" href="/style.css" />
+  <script src="/script.js" defer></script> 
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<!-- Favicon über externen Link -->
+  <link rel="icon" href="https://cdn.glitch.global/8184a181-cd9c-42ec-828f-7bee6311f5b0/Design_ohne_Titel__9_-removebg-preview.png?v=1747828631589" type="image/png">
+  
+  <!-- Open Graph Meta für Teilen -->
+  <meta property="og:title" content="Matthias Küpper">
+  <meta property="og:description" content="Bildergalerie">
+  <meta property="og:image" content="https://cdn.glitch.global/8184a181-cd9c-42ec-828f-7bee6311f5b0/Design_ohne_Titel__9_-removebg-preview.png?v=1747828631589">
+  <meta property="og:url" content="https://kuepper-matthias.glitch.me">
+</head>
+
+<body onload="setTimeout(function() {setActiveMenu('#main_menu_item_bildergalerie');}, 1000);">
+
+  <div id="kopfbereich"></div>
+  <div id="navibereich"></div>
+
+  <div id="textbereich">
+    <div class="content-block"> 
+     <p style="text-align: center; font-weight: bold; font-size: 1.2em;">Bildergalerie</p>
+      <div class="gallery" id="gallery-container"></div>
+    </div>
+  </div>
+
+  <div id="fussbereich"></div>
+  <div id="newsbereich"></div>
+
+  <!-- Inhalte dynamisch laden -->
+  <script>
+    $(window).on("load", function() { 
+      load_content('navibereich', 'content-navi.html');
+      load_content('newsbereich', 'content-news.html');
+      load_content('fussbereich', 'content-footer.html');
+      load_content('kopfbereich', 'content-header.html');
+    });
+  </script>
+
+  <!-- Galerie laden -->
+<script>
+// Hilfsfunktion: Bilder aus Markdown-Datei holen
+async function getImagesFromMarkdown(slug) {
+  try {
+    const res = await fetch(`./blog/${slug}.md`);
+    if (!res.ok) return [];
+
+    const text = await res.text();
+    // Suche alle Markdown-Bilder ![beschreibung](link)
+    const regex = /!\[.*?\]\((.*?)\)/g;
+    let match;
+    const images = [];
+
+    while ((match = regex.exec(text)) !== null) {
+      images.push(match[1]);
+    }
+    return images;
+  } catch (e) {
+    console.error('Fehler beim Laden der Markdown-Datei:', e);
+    return [];
+  }
+}
+
+async function loadGallery() {
+  try {
+    const response = await fetch('/index.json');
+    if (!response.ok) throw new Error('Netzwerkfehler beim Laden der Galerie');
+
+    let posts = await response.json();
+
+    // Sortieren nach Datum absteigend
+    posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+    const container = document.getElementById('gallery-container');
+    container.innerHTML = ''; // Container vor Befüllung leeren
+
+    for (const post of posts) {
+      let allImages = Array.isArray(post.img) ? [...post.img] : [];
+      const mdImages = await getImagesFromMarkdown(post.slug);
+      allImages = allImages.concat(mdImages);
+
+      // Duplikate entfernen
+      allImages = [...new Set(allImages)];
+
+      for (const url of allImages) {
+        const item = document.createElement('div');
+        item.className = 'gallery-item';
+
+        item.innerHTML = `
+          <a href="/blog/${post.slug}">
+            <img src="${url}" alt="${post.title}">
+            <div class="caption">${post.title}</div>
+          </a>
+        `;
+
+        container.appendChild(item);
+      }
+    }
+  } catch (err) {
+    console.error('Fehler beim Laden der Galerie:', err);
+  }
+}
+
+window.addEventListener('DOMContentLoaded', loadGallery);
+</script>
+
+</body>
+</html>

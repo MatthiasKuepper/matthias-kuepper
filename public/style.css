@@ -1,0 +1,1005 @@
+/* -----------------------------------------        */
+/*  Übergreifend / Body                              */
+/* -----------------------------------------        */
+html, body {
+  background-image:url(https....) ;        /* Hintergrundbild der Seite */
+  background-repeat:no-repeat;             /* Bild nicht wiederholen */
+  background-size: cover;                  /* Hintergrundbild an Seitenbereich anpassen */
+  overflow:hidden                          /* Kein Scrollen der Seite möglich */
+  font-size:14%;		    !Festlegen der Schriftgröße
+  /*neu*/
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Höhe mindestens Bildschirmhöhe */
+}
+
+#kopfbereich {
+  position:fixed;                          /* Fixiert am oberen Bildschirmrand */
+  top:0;                                   /* Abstand oben = 0 */
+  left:0;                                  /* Abstand links = 0 */
+  border: 0px solid #ffffff;               /* Kein sichtbarer Rahmen */
+  background-color:CadetBlue;              /* Hintergrundfarbe CadetBlue */
+  width:100%;                              /* Volle Seitenbreite */
+  height:100px;                            /* Höhe 100 Pixel */
+  z-index:2;                               /* Über andere Elemente legen */
+  border-bottom: 1px solid #102036         /* Untere Trennlinie in Dunkelblau */
+}
+#navibereich {
+  position: fixed;                         /* Fixiert die Navigation */
+  top: 80px;                              /* Position direkt unter dem Kopfbereich */
+  left: 0;                                 /* Links ausgerichtet */
+  margin-top: 0px;                         /* Kein Abstand nach oben */
+  background-color: CadetBlue;             /* Hintergrundfarbe */
+  width: 100%;                             /* Volle Breite */
+  height: 70px;                            /* Höhe 50px */
+  z-index: 2;                              /* Wird über anderen Ebenen angezeigt */
+ /*display: flex; flex-wrap: wrap; justify-content: center;
+  /*display: flex;                           /* Flexbox-Modell aktivieren */
+  justify-content: center;                 /* Horizontal zentrieren */
+  /*align-items: center;                     /* Vertikal zentrieren */
+  text-align: center;                      /* Text innerhalb der Elemente zentrieren */
+}
+#textbereich {
+  height: calc(100vh - 150px - 50px);  /* Berechnet die Höhe des Textbereichs, indem die Höhe von Kopfbereich (100px) und Fußbereich (50px) abgezogen wird */
+  padding-top: 20px;                   /* Innenabstand oben */
+  padding-left: 100px;                 /* Innenabstand links */
+  padding-right: 100px;                /* Innenabstand rechts */
+  padding-bottom: 60px;                /* Innenabstand unten */
+  background-color: #102036;           /* Hintergrundfarbe */
+  overflow: auto;                      /* Scrollen innerhalb des Bereichs erlauben */
+  flex: 1; /* Damit der Textbereich den restlichen Platz einnimmt */
+  /* die anderen bisherigen Eigenschaften bleiben erhalten */
+}
+#textbereich {
+  position: fixed;                          /* Fixierte Position auf der Seite */
+  left: 0;                                  /* Linksbündig */
+  right: 0;                                 /* Rechtsbündig */
+  top: 150px;                               /* Start unter Kopf + Navigation */
+  bottom: 50px;                             /* Abstand nach unten zur Fußzeile */
+  padding-top: 20px;                        /* Abstand innen oben */
+  padding-left: 100px;                      /* Abstand innen links */
+  padding-right: 100px;                     /* Abstand innen rechts */
+  padding-bottom: 60px;                     /* Abstand innen unten */
+  border: 2px solid #102036;                /* Unsichtbarer Rahmen */
+  background-color: #102036;                /* Dunkelblauer Hintergrund */                                                                              geändert
+  height: calc(100vh - 150px - 80px);        /* Berechnet die Höhe, abzüglich der Kopfzeile und der Fußzeile */
+  overflow: auto;                           /* Scrollen innerhalb des Bereichs erlauben */
+}
+
+#fussbereich {
+  position: fixed;                          /* Fixiert das Element am unteren Rand */
+  bottom: 0;                                /* Am unteren Rand positionieren */
+  left: 0;                                  /* Linksbündig */
+  width: 100%;                             /* Volle Breite des Viewports */
+  height: 30px;                             /* Höhe des Fußbereichs */
+  background-color: CadetBlue;              /* Hintergrundfarbe des Fußbereichs */
+  z-index: 2;                               /* Stellt sicher, dass der Fußbereich immer über dem Inhalt liegt */
+  text-align: center;                       /* Zentriert den Text im Fußbereich */
+  padding: 10px;                            /* Innenabstand im Fußbereich */
+  overflow-x: hidden;                       /* Verhindert horizontales Scrollen */
+  overflow-y: hidden;                       /* Verhindert vertikales Scrollen */
+  border-top: 2px solid #102036;                /* Unsichtbarer Rahmen */
+
+}
+/*  Höhe des Contentbereichs festlegen (wichtig!)    */                     
+.content-block { 
+padding-bottom: 100px; 
+
+}
+
+#textbereich::-webkit-scrollbar {
+  width: 10px;                              /* Breite des Scrollbalkens */
+}
+
+#textbereich::-webkit-scrollbar-thumb {
+  background: #888;                         /* Farbe des Scrollbalkens */
+  border-radius: 10px;                      /* Abgerundete Ecken des Scrollbalkens */
+}
+
+#textbereich::-webkit-scrollbar-thumb:hover {
+  background: #555;                         /* Farbe des Scrollbalkens, wenn darüber gehovert wird */
+}
+
+ 
+
+/* -----------------------------*/
+/* Schriftformatierung          */
+/* -----------------------------*/
+p {
+  font-family: sans-serif;
+  font-style:normal;
+  font-size:20pt;
+  font-weight:bold;
+  color:white;
+}
+p1 {
+  font-family: sans-serif;
+  font-style:normal;
+  font-size:12pt;
+  font-weight:400;
+  color:white;
+}
+
+p2 {
+  font-family: sans-serif;
+  font-style:normal;
+  font-size:20pt;
+  font-weight:bold;
+  color:white;
+}
+.title {
+font-family: sans-serif;
+font-size:30pt;
+font-weight:bold; 
+color:white;
+}
+
+.footer-text {
+  font-family: sans-serif;
+font-size:100%;                  		! Festlegung des Schriftgröße;
+font-weight:normal;                	! Festlegung der Fettschrift;
+color:white;       		            ! Schriftfarbe (hier weiß);
+  font-family: sans-serif;
+}
+
+.footer-text > a.active {
+  font-family: sans-serif;
+	font-weight:700;		                                         ! Festlegung der Fettschrift, auch „bold“ möglich;
+	text-shadow: 1px 1px white, 2px 2px white, 3px 3px 	#696969; ! Text-Schatten;
+  color:rgba(16, 32, 54, 1);	                                 ! Festlegung des Schriftfarbe; /*rgba(16, 32, 54, 1)*/
+}
+a {
+  color: white;
+  font-size: 80%;
+  text-decoration: underline CadetBlue;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline CadetBlue;
+}
+
+
+.header-title {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20pt;
+  font-weight:700;
+  background-color:(0;0;0;0);
+  padding: 0px;
+  background-color: cadetBlue;
+
+}
+.header-image{
+  content:url(https://cdn.glitch.global/8184a181-cd9c-42ec-828f-7bee6311f5b0/Matthias%20K%C3%BCpper.png?v=1750970681283);
+  width:400px;
+  display: block;
+  margin: auto;
+  /*width: 40%;*/
+  margin:5px; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  position: absolute;
+  top: -9999px;
+  bottom: -9999px;
+  left: -9999px;
+  right: -9999px;
+  margin: auto;.mainnav
+  
+}
+
+.picture-who {
+content:url(https://cdn.glitch.global/8184a181-cd9c-42ec-828f-7bee6311f5b0/Matthias%20K%C3%BCpper_20250618_125651_0000.png?v=1750244232266); // Den Link zu einem Bild kann mit Hilfe von CSS festgelegt werden;
+width:200px;
+float:left;  // Das Bild wird links angezeigt. Bei float:right wird es rechts angezeigt;
+margin:5px;
+}
+img {
+    max-width: 600%; /* Bild wird nicht größer als das Eltern-Element */
+    height: auto; /* Seitenverhältnis bleibt erhalten */
+}
+
+
+/*  -----------------------------------------        */
+/*  Menüformatierung                                 */
+/*  -----------------------------------------        */
+
+/*  Linkformatierung für das Menü übergreifend       */
+.naviformat a, button {
+    font-family: sans-serif;
+    text-transform: uppercase;    /* Verwende Großbuchstaben */
+    font-size: 90%;               /* Festlegung der Schriftgröße */
+    font-weight: 700;             /* Fettschrift */
+    color: #102036;                 /* Schriftfarbe weiß */
+    display: block;               /* Blockelement */
+    transition: all 0.3s ease-out 0s; /* Übergang von Normal zu Hover */
+    text-decoration: none;        /* Kein Unterstrich */
+    line-height: 1.0rem;          /* Erhöhter Zeilenabstand */
+    padding: 0px 5px 0px 5px;   /* Innenabstand (oben und unten größer) */
+}
+
+/*  Formatierung des Hauptmenüs (mainnav)                  */
+.mainnav {
+    display: flex;               /* Flexbox aktivieren */
+    justify-content: center;     /* Zentriert die Menüeinträge horizontal */
+    list-style-type: none;       /* Keine Aufzählungszeichen */
+    margin: 20px 5px;            /* Außenabstand */
+    padding: 5px 5px;            /* Innenabstand */
+}
+
+.mainnav > li {
+    float: none;                 /* float entfernen, da flexbox genutzt wird */
+    margin: 0 5px;              /* Abstand zwischen Menüpunkten */
+}
+
+/*  Formatierung des aktiven Hauptmenüpunkts */
+.mainnav > li > a.active {
+    font-weight: 700;            /* Fettschrift */
+    color: white;              /* Schriftfarbe */
+}
+
+/*  Formatierung des Menüpunkts, wenn die Maus darüber fährt */
+.mainnav > li > a:hover {
+    font-weight: 00;            /* Fettschrift */
+    font-style: italic;          /* Kursivschrift */
+  color:#102036;
+         /* Kein Unterstrich */
+  font-size:100%;
+}
+
+
+
+
+
+/*  -----------------------------------------        */
+/*  Für Teaser (Blickfang)             	        */
+/*  -----------------------------------------        */
+.teaser {
+  font-weight:bold;				                ! setze Schriftart und -gewicht;
+	font-family:sans-serif;
+	padding: 5px 5px;			                	! Innenabstand für den Teaser;
+	margin: 0 2px 4px 2px;		             	! Außenabstand nach unten zum nächsten Teaser;
+	border-bottom: 1px solid #ccc;	 
+  color:White; ! unten gibt es eine Begrenzungslinie;
+}
+.teaser_date {
+	font-size:90%;                          ! etwas kleiner als die Standardschrift;
+}
+.teaser_title {
+	font-size:110%;                         ! etwas größer als die Standardschrift;
+	line-height:140%;
+}
+.teaser_text {
+   line-height: 140%;                     ! Anpassung der Zeilenhöhe;
+  font-size:100%;
+}
+a.teaser_link {
+padding-top: 0%;
+color:white;
+}
+.teaser_border {
+  color: #102036;
+  border: 2px solid #102036;
+  
+/*Kontaktformular*/
+}
+
+
+/* Grundlegende Formatierung für das Formular */
+#contact-formular {
+    font-family:sans-serif;
+    color: white; /* Schriftfarbe weiß */
+}
+
+/* Definition der Felder des Kontaktformulars */
+#contact-formular input[type="text"], 
+#contact-formular textarea, 
+#contact-formular input[type="email"] {
+    color: white ; /* Textfarbe im Feld ist jetzt weiß*/
+    padding-left:3%;
+    padding-right: 3%;
+    padding-top: 1px;
+    padding-bottom: 15px;
+    width: 100%;
+    height: 15px; /* Höhe der Eingabefelder anpassen, wenn nötig! */
+    background: CadetBlue; /* Weißer Hintergrund für die Felder */
+    border-radius: 15px;
+    margin-bottom: 10px;
+    border: 1px solid CadetBlue; /* Graue Randfarbe für Felder */
+    box-shadow: 0 0px 3px CadetBlue inset;
+    transition: all 0.2s linear;
+
+}
+
+/* Textarea für das Anliegen-Feld größer machen */
+#contact-formular textarea {
+    height: 100px; /* Höhe des Textarea-Felds für das Anliegen */
+    font-size: 16px; /* Größere Schriftgröße im Textarea */
+    vertical-align: top;
+}
+
+/* Fokuszustand für Felder */
+#contact-formular input[type="text"]:focus, 
+#contact-formular input[type="email"]:focus, 
+#contact-formular textarea:focus {
+    background-color: CadetBlue; /* Hintergrundfarbe bei Fokus */
+}
+
+/* Platzhaltertext für Felder */
+#contact-formular input[type="text"]::placeholder, 
+#contact-formular input[type="email"]::placeholder, 
+#contact-formular textarea::placeholder {
+    color: #888; /* Farbe des Platzhaltertextes */
+    font-style: italic; /* Platzhaltertext kursiv */
+}
+
+/* Button im Kontaktformular formatieren */
+#contact-formular input[type="submit"] {
+    color: white;
+    background-color: CadetBlue;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    letter-spacing: 0;
+    line-height: 14px;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: all 0.3s ease 0s;
+    text-align: center;
+}
+
+/* Tabelle für das Formular */
+.form-table {
+    padding-right: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 0;
+    cellspacing: 1;
+    cellpadding: 2;
+    
+}
+
+/* Definition der Labels im Formular */
+.form-label {
+  font-family:sans-serif;
+    vertical-align: top;
+    padding-right: 10px;
+    width: 5%;
+    font-weight: bold;
+    color:white;
+}
+
+.form-field {
+    vertical-align: top;
+    width: 95%;
+}
+
+.form-label-kontakt {
+    vertical-align: top;
+    padding-right: 10px;
+    width: 30%;
+    font-weight: bold;
+  color:white;
+}
+
+.form-field-kontakt {
+    vertical-align: top;
+    text-align: left;
+    width: 50%;
+}
+
+.form-submit {
+    padding-top: 0%;
+  padding-left:10%;
+    /*text-align: center;*/
+}
+#contact-formular {
+    font-family: sans-serif;
+    color: white;
+    width: 500px;            /* Feste Breite */
+    margin: 0 auto;          /* Zentrierung */
+}
+
+/* Definition der Eingabefelder */
+#contact-formular input[type="text"], 
+#contact-formular input[type="email"] {
+    height: 30px; /* Höhe der Textfelder anpassen, wenn nötig! */
+}
+
+/* Definition des Betreffs */
+#contact-formular input[type="text"]#betreff {
+    height: 30px;
+}
+
+/* ! Verändere hier den Platzhaltertext für die Felder */
+#contact-formular input[name="name"]::placeholder {
+    content: "Ihr Name"; /* Beispiel: Platzhalter für das Namensfeld */
+}
+
+#contact-formular input[name="mobilnummer"]::placeholder {
+    content: "Ihre Mobilnummer"; /* Beispiel: Platzhalter für das Mobilnummer-Feld */
+}
+
+#contact-formular input[name="email"]::placeholder {
+    content: "Ihre E-Mail-Adresse"; /* Beispiel: Platzhalter für das E-Mail-Feld */
+}
+
+#contact-formular input[name="betreff"]::placeholder {
+    content: "Betreff"; /* Beispiel: Platzhalter für das Betreff-Feld */
+}
+
+#contact-formular textarea[name="anliegen"]::placeholder {
+    content: "Beschreiben Sie Ihr Anliegen"; /* Beispiel: Platzhalter für das Anliegen-Feld */
+}
+/*             */
+/*Bildergalerie*/ 
+/*             */
+/* ========== GALLERY LAYOUT ========== */
+
+.gallery {
+  column-count: 5;
+  column-gap: 1.5rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1400px) {
+  .gallery {
+    column-count: 4;
+  }
+}
+
+@media (max-width: 1100px) {
+  .gallery {
+    column-count: 3;
+  }
+}
+
+@media (max-width: 800px) {
+  .gallery {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery {
+    column-count: 1;
+    padding: 1rem;
+    column-gap: 1rem;
+  }
+  .gallery-item {
+    margin-bottom: 1.5rem;
+  }
+  .gallery-item .caption {
+    font-size: 0.95rem;
+    padding: 0.3rem 0.6rem;
+  }
+}
+
+.gallery-item {
+  break-inside: avoid;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+  width: 100%;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.02);
+}
+
+/* ========== CAPTION ========== */
+
+.gallery-item .caption {
+  margin-top: 0.4rem;
+  background-color: cadetblue;
+  color: white;
+  font-family: 'Rubik', sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 0.4rem 0.8rem;
+  text-align: center;
+  border-radius: 12px;
+  box-sizing: border-box;
+  width: 100%;
+  display: block;
+  line-height: 1.4;
+}
+
+/* ========== LINK-STYLING ========== */
+.gallery-item a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/*------------------------------------------------------------------------------------*/
+/* Links Links Links Links Links Links Links Links Links /*
+/*------------------------------------------------------------------------------------*/
+.linktree-container {
+  max-width: 480px;
+  margin: 80px auto;
+  background: CadetBlue;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.link-box {
+  background: #102036;
+  border-radius: 14px;
+  padding: 15px;
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+  color: white;
+  text-align: left;
+}
+
+.link-box img {
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-right: 15px;
+  transition: transform 0.3s ease;
+}
+
+.link-box:hover img {
+  transform: scale(1.21);
+}
+
+.link-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.link-text strong {
+  font-size: 1.1em;
+  margin-bottom: 5px;
+}
+/* ----------------------------------------------------------------------------------- */
+/* Responsive Media Queries - Text- und Absatzformatierung bei unterschiedlichen Bildschirmgrößen */
+/* Es werden nur Werte angepasst, die auch geändert werden                             */
+/* ----------------------------------------------------------------------------------- */
+
+/* ----- Tablets ------------------------------------------------------------------- */
+@media only screen and (max-width: 1024px) {  /* px war leer, daher hier 1024 als Beispiel */
+
+  /* Schriftgröße */
+  html, body {
+      font-size: 12px;
+  }
+
+  /* Kopfbereich */
+  #kopfbereich {
+      height: 80px; /* Höhe des Kopfbereichs */
+  }
+
+  /* Navibereich */
+  #navibereich {
+      top: 80px;         /* Position unterhalb Kopfbereich */
+      width: 150px;      /* Breite */
+      min-height: 150px; /* Mindesthöhe */
+  }
+
+  /* Textbereich */
+  #textbereich {
+      top: 80px;          
+      padding-left: 160px;   
+      padding-right: 160px;  
+      padding-top: 10px;     
+      padding-bottom: 70px;  
+      bottom: 45px;
+  }
+
+  /* Newsbereich */
+  #newsbereich {
+      top: 80px;
+      width: 150px;
+      min-height: 150px;
+  }
+
+  /* Fußbereich */
+  #fussbereich {
+      height: 40px;
+      padding: 5px;
+  }
+
+  /* Headertitle */
+  .header-title {
+      font-size: 200%;
+  }
+
+  /* Menü-Schrift */
+  #navibereich .mainnav > li > a {
+      font-size: 120%;
+      line-height: 15px;
+  }
+
+  /* Kontaktformular Tabelle */
+  .form-table {
+      width: 90%;
+  }
+
+}
+
+/* --------- Smartphones ------------------------------------------------------------------- */
+@media only screen and (max-width: 1200px) {
+
+  /* Schriftgröße */
+  html, body {
+      font-size: 15px;
+  }
+
+  /* Kopfbereich */
+  #kopfbereich {
+      height: 70px;
+  }
+
+  /* Navibereich (Hamburger-Button) */
+  #navibereich {
+      top: 5px;
+      left: 88%;
+      width: 35px;
+      margin: 2px;
+      height: 35px;
+      min-height: 35px;
+      padding: 2px;
+      background: url("https://cdn.glitch.global/8184a181-cd9c-42ec-828f-7bee6311f5b0/responsive-menu1.png?v=1744361695245") no-repeat 2px 2px;
+      background-size: 30px 30px;
+      cursor: pointer;
+      border-radius: 3px;
+      opacity: 0.9;
+      text-align: right;
+      touch-action: manipulation;
+      pointer-events: auto;
+  }
+
+  /* Navimenü (versteckt, bei Hover sichtbar) */
+  #navibereich .mainnav {
+      background-color: cadetBlue;
+      min-width: 120px;
+      text-align: left;
+      display: none;
+      left: 60%;
+      float: right;
+      padding: 2px;
+      margin-top: 25px;
+  }
+
+  #navibereich .mainnav > li > a {
+      font-size: 110%;
+      line-height: 20px;
+      padding: 2px;
+  }
+
+  #navibereich:hover .mainnav,
+  #navibereich:active .mainnav {
+      opacity: 1;
+      display: block;
+  }
+
+  /* Textbereich */
+  #textbereich {
+      top: 70px;
+      padding-left: 3vh;
+      padding-right: 3vh;
+      padding-top: 10px;
+      padding-bottom: 45vh;
+      bottom: 45px;
+  }
+
+  /* Newsbereich (versteckt) */
+  #newsbereich {
+      visibility: hidden;
+  }
+
+  /* Fußbereich */
+  #fussbereich {
+      height: 45px;
+      padding: 5px;
+  }
+
+  /* Logo */
+  .header-image {
+      width: 250px;
+  }
+
+  /* Headertitle */
+  .header-title {
+      font-size: 150%;
+      padding-right: 40px;
+  }
+
+  /* Kontaktformular Tabelle */
+  .form-table {
+      width: 98%;
+  }
+
+  /* Fußzeile Text */
+  .footer-text {
+      font-family: sans-serif;
+      font-size: 100%;
+      font-weight: normal;
+      color: #ffffff;
+  }
+
+  /* Blog-Wrapper: max Breite für Gesamtbereich, zentriert */
+  .content-block {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+
+  /* Grid: flexible Anzahl Spalten, min 280px pro Spalte */
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem 0;
+  }
+
+  /* Einzelner Beitrag: max Breite, damit nicht zu breit auf großen Screens */
+  .post.blog-item {
+    background-color: Cadetblue;
+    border-radius: 16px;
+    padding: 1rem;
+    text-align: center;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+    box-sizing: border-box;
+
+    max-width: 320px; /* Maximalbreite wie auf Tablet */
+    margin-left: auto;
+    margin-right: auto;
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  /* Hover Effekt */
+  .post.blog-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Bild im Beitrag */
+  .post.blog-item img {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    object-fit: cover;
+    aspect-ratio: 16 / 9;
+  }
+
+  /* Textabsätze im Beitrag */
+  .post.blog-item p {
+    margin: 0 0 0.5rem 0;
+  }
+
+  .post.blog-item p:first-child {
+    color: black;
+    font-weight: bold;
+    font-size: 0.85rem;
+  }
+
+  .post.blog-item .date {
+    font-size: 0.85rem;
+    color: white;
+  }
+
+  .post.blog-item .title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: white;
+  }
+
+  .post.blog-item .description {
+    font-size: 0.95rem;
+    font-weight: normal;
+    color: #102036;
+  }
+
+  /* Responsive für Handy: 1 Spalte, Bildhöhe anpassen */
+  @media screen and (max-width: 600px) {
+    .blog-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .post.blog-item {
+      max-width: 100%; /* Auf kleinen Geräten volle Breite */
+      margin: 0;
+    }
+
+    .post.blog-item img {
+      aspect-ratio: auto;
+      height: 40vh;
+    }
+  }
+
+  /* Optional: Trennlinie mobil */
+  @media only screen and (max-width: 1200px) {
+    hr {
+      border: none;
+      border-top: 2px solid white;
+      margin: 1rem 0;
+      width: 100%;
+      display: block;
+    }
+  }
+}
+
+/* ----------------------------------------------------------------------------------- */
+/* Blog Bereich - Styling der Beiträge und Layout für Desktop/Tablet und Mobilgeräte    */
+/* ----------------------------------------------------------------------------------- */
+
+.content-block {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem 0;
+}
+
+.post.blog-item {
+  background-color: Cadetblue;
+  border-radius: 16px;
+  padding: 1rem;
+  text-align: center;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  box-sizing: border-box;
+
+  max-width: 320px; /* Maximalbreite für Beiträge */
+  margin-left: auto;
+  margin-right: auto;
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.post.blog-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.post.blog-item img {
+  width: 100%;
+  height: auto;
+  max-width: 320px;
+  aspect-ratio: 16 / 9;     /* Fixes 8:4,5 Format */
+  border-radius: 12px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  margin-bottom: 1rem; /* Abstand unter dem Bild */
+}
+
+.post.blog-item p {
+  margin: 0 0 0.5rem 0;
+}
+
+.post.blog-item p:first-child {
+  color: #102036;
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+
+.post.blog-item .date {
+  font-size: 0.85rem;
+  color: white;
+}
+
+.post.blog-item .title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: white;
+}
+
+.post.blog-item .description {
+  font-size: 0.95rem;
+  font-weight: normal;
+  color: #102036;
+}
+
+/* Responsive Blog Anpassungen für Tablet und Smartphone */
+@media only screen and (max-width: 1024px) {
+  .post.blog-item {
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Bildformat bleibt erhalten */
+  .post.blog-item img {
+    aspect-ratio: 16 / 9;
+    height: auto;
+    max-width: 320px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .blog-grid {
+    grid-template-columns: 1fr; /* Nur eine Spalte */
+  }
+
+  .post.blog-item {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .post.blog-item img {
+    aspect-ratio: 16 / 9;    /* Format bleibt */
+    height: auto;
+    max-width: 100%;
+  }
+}
+
+/* Trennlinie mobil */
+@media only screen and (max-width: 1200px) {
+  hr {
+    border: none;
+    border-top: 2px solid white;
+    margin: 1rem 0;
+    width: 100%;
+    display: block;
+  }
+}
+/*  -----------------------------------------        */
+/*  Suche             	        */
+/*  -----------------------------------------        */
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.search-icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+#searchInput {
+  display: none;
+  padding: 5px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.cadetblue {
+  color: CadetBlue;
+  font-weight: bold;
+}
+
+
