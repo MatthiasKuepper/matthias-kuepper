@@ -1,0 +1,39 @@
+{
+  "//1": "describes your app and its dependencies",
+  "//2": "https://docs.npmjs.com/files/package.json",
+  "//3": "updating this file will download and update your packages",
+  "name": "bksd",
+  "version": "1.0.0",
+  "description": "Website des Berufskollegs Kaufmännische Schulen des Kreises Düren",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "canvas": "^3.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "express-device": "^0.4.2",
+    "gray-matter": "^4.0.3",
+    "markdown-it": "^14.1.0",
+    "multiparty": "^4.2.3",
+    "nodemailer": "^7.0.3",
+    "zero-md": "^3.1.7"
+  },
+  "engines": {
+    "node": "12.x"
+  },
+  "repository": {
+    "url": "https://glitch.com/edit/#!/passwort-save-example"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "glitch",
+    "nodemailer",
+    "express",
+    "passwort-save-example"
+  ]
+}
